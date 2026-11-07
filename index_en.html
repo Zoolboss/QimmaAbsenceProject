@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Qimma Private School - Absence Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="helpModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Help & Inquiries</h3>
+            <p>If you encounter any issues while submitting your leave request, please follow these instructions:</p>
+            <ul>
+                <li>Ensure you enter the student's name and class correctly.</li>
+                <li>Choose the appropriate absence reason and attach required documents (if any).</li>
+                <li>Select the start and end dates accurately before submitting.</li>
+                <li>For technical assistance, please contact the school administration.</li>
+            </ul>
+            <button id="closeModalBtn" class="submit-btn">Close</button>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <header class="header-bar">
+            <div class="header-title">
+                <img src="qimmaLogo.png" alt="School Logo" class="school-logo">
+                <h2>Al Qimma Private School - Absence Portal</h2>
+            </div>
+            <div class="nav-buttons">
+                <a href="teacher_en.html" class="nav-btn" style="text-decoration: none;">Teacher View</a>
+                <button id="helpBtn" class="nav-btn">Need Help?</button>
+                <a href="index.html" class="nav-btn" style="text-decoration: none;">العربية</a>
+            </div>
+        </header>
+
+        <div class="search-section">
+            <label for="searchStudent">Track Leave Request Status</label>
+            <div class="search-box">
+                <input type="text" id="searchStudent" placeholder="Enter student name to search...">
+                <button id="searchBtn" type="button" class="nav-btn">Search</button>
+            </div>
+            <div id="statusResult" class="status-result"></div>
+        </div>
+
+        <form id="LeaveForm">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" required>
+
+            <label for="studentClass">Class / Grade</label>
+            <input type="text" id="studentClass" required>
+
+            <label for="LeaveType">Reason for Absence</label>
+            <select id="LeaveType">
+                <option value="Select Reason">Select Reason</option>
+                <option value="Medical Leave">Medical Leave</option>
+                <option value="Family Circumstances">Family Circumstances</option>
+                <option value="Other Reasons">Other Reasons</option>
+            </select>
+
+            <div class="date-row">
+                <div class="date-group">
+                    <label>From Date</label>
+                    <input type="date" id="startDate">
+                </div>
+                <div class="date-group">
+                    <label>To Date</label>
+                    <input type="date" id="endDate">
+                </div>
+            </div>
+
+            <div id="OtherSection" class="dynamic-section">
+                <label for="otherReason">Specify Reason</label>
+                <input type="text" id="otherReason">
+            </div>
+
+            <div id="MedicalReport" class="dynamic-section">
+                <label>Attach Medical Report</label>
+                <input type="file" id="medicalFile">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Absence Request</button>
+        </form>
+    </div>
+
+    <script src="script_en.js"></script>
+</body>
+</html>

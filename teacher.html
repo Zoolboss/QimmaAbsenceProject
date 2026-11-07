@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة القمة الخاصة - لوحة المعلم</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card-container teacher-card">
+        <header class="header-bar">
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn">واجهة الطالب</a>
+            </div>
+            <div class="header-title">
+                <h2>لوحة المعلم - إدارة الطلبات</h2>
+                <img src="qimmaLogo.png" alt="شعار المدرسة" class="school-logo">
+            </div>
+        </header>
+
+        <div class="table-wrapper">
+            <table id="requestsTable">
+                <thead>
+                    <tr>
+                        <th>اسم الطالب</th>
+                        <th>الصف</th>
+                        <th>نوع الغياب</th>
+                        <th>الفترة</th>
+                        <th>التفاصيل / المرفقات</th>
+                        <th>الحالة</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="requestsBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="teacher.js"></script>
+</body>
+</html>

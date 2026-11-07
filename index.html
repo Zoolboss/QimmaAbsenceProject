@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة القمة الخاصة - بوابة الغياب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="helpModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>مساعدة واستفسارات</h3>
+            <p>إذا واجهتك أي مشكلة أثناء تقديم طلب الغياب، يرجى اتباع التعليمات التالية:</p>
+            <ul>
+                <li>تأكد من إدخال اسم الطالب وصفه الدراسي بشكل صحيح.</li>
+                <li>اختر سبب الغياب المناسب وأرفق المستندات المطلوبة (إن وجدت).</li>
+                <li>حدد تواريخ البداية والنهاية بدقة قبل الإرسال لتجنب الرفض.</li>
+                <li>للمساعدة الفنية، يرجى مراجعة إدارة المدرسة.</li>
+            </ul>
+            <button id="closeModalBtn" class="submit-btn">إغلاق</button>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <header class="header-bar">
+            <div class="nav-buttons">
+                <a href="teacher.html" class="nav-btn" style="text-decoration: none;">واجهة المعلم</a>
+                <button id="helpBtn" class="nav-btn">تحتاج مساعدة؟</button>
+                <a href="index_en.html" class="nav-btn" style="text-decoration: none;">English</a>
+            </div>
+            <div class="header-title">
+                <h2>مدرسة القمة الخاصة - بوابة الغياب</h2>
+                <img src="qimmaLogo.png" alt="شعار المدرسة" class="school-logo">
+            </div>
+        </header>
+
+        <div class="search-section">
+            <label for="searchStudent">متابعة حالة الطلب</label>
+            <div class="search-box">
+                <input type="text" id="searchStudent" placeholder="أدخل اسم الطالب للبحث...">
+                <button id="searchBtn" type="button" class="nav-btn">بحث</button>
+            </div>
+            <div id="statusResult" class="status-result"></div>
+        </div>
+
+        <form id="LeaveForm">
+            <label for="studentName">اسم الطالب</label>
+            <input type="text" id="studentName" required>
+
+            <label for="studentClass">الصف</label>
+            <input type="text" id="studentClass" required>
+
+            <label for="LeaveType">سبب الغياب</label>
+            <select id="LeaveType">
+                <option value="سبب الغياب">سبب الغياب</option>
+                <option value="اجازة مرضية">اجازة مرضية</option>
+                <option value="ظروف عائلية">ظروف عائلية</option>
+                <option value="اسباب اخرى">اسباب اخرى</option>
+            </select>
+
+            <div class="date-row">
+                <div class="date-group">
+                    <label>من تاريخ</label>
+                    <input type="date" id="startDate">
+                </div>
+                <div class="date-group">
+                    <label>إلى تاريخ</label>
+                    <input type="date" id="endDate">
+                </div>
+            </div>
+
+            <div id="OtherSection" class="dynamic-section">
+                <label for="otherReason">سبب الغياب التفصيلي</label>
+                <input type="text" id="otherReason">
+            </div>
+
+            <div id="MedicalReport" class="dynamic-section">
+                <label>إرفاق الشهادة المرضية</label>
+                <input type="file" id="medicalFile">
+            </div>
+
+            <button type="submit" class="submit-btn">سجل غيابك</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

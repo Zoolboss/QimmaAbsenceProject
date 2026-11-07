@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Qimma Private School - Teacher Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card-container teacher-card">
+        <header class="header-bar">
+            <div class="header-title">
+                <img src="qimmaLogo.png" alt="School Logo" class="school-logo">
+                <h2>Teacher Dashboard - Manage Requests</h2>
+            </div>
+            <div class="nav-buttons">
+                <a href="index_en.html" class="nav-btn" style="text-decoration: none;">Student View</a>
+            </div>
+        </header>
+
+        <div class="table-wrapper">
+            <table id="requestsTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Class</th>
+                        <th>Reason</th>
+                        <th>Duration</th>
+                        <th>Details / Attachment</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="requestsBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="teacher_en.js"></script>
+</body>
+</html>
